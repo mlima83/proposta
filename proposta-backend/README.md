@@ -25,4 +25,10 @@ Este projeto foi desenvolvido como avaliação técnica.
 - No diretório raiz do projeto execute o comando `./mvnw install dockerfile:build` para gerar a imagem.
 - Execute o comando `docker run -p 8080:8080 -d calcard/proposta-backend` para subir o projeto.
 - Acesse pelo navegador no seguinte endereço `http://localhost:8080`.
+
+### Sobre o motor de crédito
+
+O motor de análise de crédito utiliza árvore de decisão com o Algoritmo ID3 (Inductive Decision Tree).
+Através da mostragem disponibilizada na avaliação, o algoritmo toma a decisão baseando-se na probabilidade de ganho em cada ramificação de informação relevante.
+Foi utilizada a implementação realizada pelo Leandro Carlos Fernandes, referência: https://github.com/leandro-carlos-fernandes/id3
 `
