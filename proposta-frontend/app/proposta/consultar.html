@@ -1,0 +1,23 @@
+<form role="form" name="mainForm" class="formulario">
+    <div  class="container">
+        <div class="row">  
+            <h1>Consulta de resultado da análise</h1>
+        </div>
+        <div class="row" ng-if="errors.length > 0">
+            <div class="alert alert-warning">
+                <span ng-repeat="e in errors">{{e}}</span>
+            </div>  
+        </div>
+        <div class="row"> 
+            <div class="form-group col-sm-4">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" required
+                ng-model="cpf" ui-mask="999.999.999-99" ui-maskplaceholder-char="-">
+                <span class="error" ng-show="mainForm.cpf.$error.required">O cpf do cliente é obrigatório</span>
+            </div>
+        </div>
+        <div class="row text-center">
+            <button type="button" class="btn btn-primary" ng-click="buscar()" ng-disabled="mainForm.$invalid">Buscar</button>
+        </div>
+    </div>
+</form>  

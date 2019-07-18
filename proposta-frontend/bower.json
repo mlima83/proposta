@@ -1,0 +1,104 @@
+{
+  "name": "proposta-frontend",
+  "description": "Aplicação web responsável por gerenciar propostas de crédito.",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-ui-router": "^1.0.22",
+    "bootstrap": "3.3.1",
+    "jquery": "^3.4.1",
+    "jquery-ui": "1.11.1",
+    "font-awesome": "4.3.0",
+    "angular-bootstrap": "^2.5.0",
+    "angular-ui-grid": "ng-grid#^4.8.1",
+    "angular-block-ui": "^0.2.2",
+    "angular-ui-mask": "^1.8.7",
+    "angular-resource": "^1.7.8"
+  },
+  "overrides": {
+    "jquery": {
+      "main": "dist/jquery.min.js"
+    },
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "dist/css/bootstrap-theme.css",
+        "dist/fonts/*.*"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css",
+        "fonts/*.*"
+      ]
+    },
+    "jquery-ui": {
+      "main": [
+        "jquery-ui.min.js"
+      ]
+    }
+  },
+  "install": {
+    "path": {
+      "css": "src/main/angular/app/components/css",
+      "js": "src/main/angular/app/components/js",
+      "eot": "src/main/angular/app/components/fonts",
+      "svg": "src/main/angular/app/components/fonts",
+      "ttf": "src/main/angular/app/components/fonts",
+      "woff": "src/main/angular/app/components/fonts",
+      "woff2": "src/main/angular/app/components/fonts",
+      "xap": "src/main/angular/app/components/resources",
+      "swf": "src/main/angular/app/components/resources",
+      "otf": "src/main/angular/app/components/fonts",
+      "png": "src/main/angular/app/components/images"
+    },
+    "sources": {
+      "angular": [
+        "bower_components/angular/angular.min.js"
+      ],
+      "angular-resource": [
+        "bower_components/angular-resource/angular-resource.min.js"
+      ],
+      "angular-sanitize": [
+        "bower_components/angular-sanitize/angular-sanitize.min.js"
+      ],
+      "bootstrap": [
+        "bower_components/bootstrap/dist/js/bootstrap.min.js",
+        "bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
+        "bower_components/bootstrap/dist/css/bootstrap.min.css",
+        "bower_components/bootstrap/fonts/*.*"
+      ],
+      "ng-grid": [
+        "bower_components/ng-grid/build/ng-grid.min.js",
+        "bower_components/ng-grid/ng-grid.min.css"
+      ],
+      "jquery": [
+        "bower_components/jquery/dist/jquery.min.js"
+      ],
+      "jquery-ui": [
+        "bower_components/jquery-ui/jquery-ui.min.js",
+        "bower_components/jquery-ui/themes/smoothness/images/*.*",
+        "bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css"
+      ],
+      "angular-bootstrap": [
+        "bower_components/angular-bootstrap/ui-bootstrap.min.js",
+        "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"
+      ],
+      "angular-block-ui": [
+        "bower_components/angular-block-ui/dist/angular-block-ui.min.js",
+        "bower_components/angular-block-ui/dist/angular-block-ui.min.css"
+      ],
+      "font-awesome": [
+        "bower_components/font-awesome/css/font-awesome.min.css",
+        "bower_components/font-awesome/fonts/fontawesome-webfont.ttf",
+        "bower_components/font-awesome/fonts/fontawesome-webfont.woff",
+        "bower_components/font-awesome/fonts/fontawesome-webfont.woff2"
+      ],
+      "angular-ui-mask": [
+        "bower_components/angular-ui-mask/dist/mask.min.js"
+      ]
+    }
+  }
+}

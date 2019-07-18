@@ -1,0 +1,24 @@
+<div  class="container">
+    <div class="row">  
+        <h1>Resultado</h1>
+    </div>
+    <div class="row"> 
+        <div class="form-group col-sm-4">
+            <label for="cpf">CPF: {{proposta.cliente.cpf}}</label>
+        </div>
+        <div class="form-group col-sm-8">
+            <label for="nome">Nome: {{proposta.cliente.nome}}</label>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="form-group col-sm-4">
+            <label for="estado">Resultado análise: {{proposta.resultado}}</label>
+        </div>   
+        <div class="form-group col-sm-8">
+            <label for="dependentes">Limite: {{proposta.limite}}</label>
+        </div> 
+    </div>
+    <div class="row text-center">
+        <button type="button" class="btn btn-primary" ui-sref="cadastrar" ng-disabled="mainForm.$invalid">Nova proposta</button>
+    </div>
+</div>  

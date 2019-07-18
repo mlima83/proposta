@@ -1,0 +1,81 @@
+<form role="form" name="mainForm" class="formulario">
+    <div  class="container">
+
+        <div class="row">  
+            <h1>Proposta</h1>
+        </div>
+        <div class="row" ng-if="errors.length > 0">
+            <div class="alert alert-danger">
+                <span ng-repeat="e in errors">{{e}}</span>
+            </div>  
+        </div>
+        <div class="row"> 
+            <div class="form-group col-sm-4">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" required
+                ng-model="proposta.cliente.cpf" ui-mask="999.999.999-99" ui-maskplaceholder-char="-">
+                <span class="error" ng-show="mainForm.cpf.$error.required">O cpf do cliente é obrigatório</span>
+            </div>
+            <div class="form-group col-sm-8">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" 
+                aria-describedby="nomeHelp" placeholder="Nome do cliente"
+                ng-model="proposta.cliente.nome" required>
+                <span class="error" ng-show="mainForm.nome.$error.required">O nome do cliente é obrigatório</span>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="form-group col-sm-4">
+                <label for="idade">Idade</label>
+                <input type="number" class="form-control" required id="idade" name="idade" placeholder="Idade do cliente"
+                ng-model="proposta.cliente.idade">
+                <span class="error" ng-show="mainForm.idade.$error.required">A idade do cliente é obrigatória</span>
+            </div>   
+            <div class="form-group  col-sm-4">
+                <label for="sexo">Sexo</label>
+                <select required id="sexo" class="form-control" ng-model="proposta.cliente.sexo" name="sexo">
+                    <option value="" >-- Selecione --</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+                <span class="error" ng-show="mainForm.sexo.$error.required">O sexo do cliente é obrigatório</span>
+            </div>   
+            <div class="form-group  col-sm-4">
+                <label for="estado-civil">Estado Civil</label>
+                <select required id="estado-civil" class="form-control" name="estadocivil" ng-model="proposta.cliente.estadoCivil">
+                    <option value="" >-- Selecione --</option>
+                    <option value="SOLTEIRO">Solteiro</option>
+                    <option value="DIVORCIADO">Divorciado</option>
+                    <option value="VIUVO">Viúvo</option>
+                    <option value="CASADO">Casado</option>
+                </select>
+                <span class="error" ng-show="mainForm.estadocivil.$error.required">O estado civil do cliente é obrigatório</span>
+            </div>  
+        </div>
+        <div class="row"> 
+            <div class="form-group col-sm-4">
+                <label for="estado">Estado</label>
+                <select required id="estado" class="form-control" ng-model="proposta.cliente.estado" name="estado">
+                    <option value="" >-- Selecione --</option>
+                    <option ng-repeat="estado in estados" value="{{estado.id}}">{{estado.nome}}</option>
+                </select>
+                <span class="error" ng-show="mainForm.estado.$error.required">O estado do cliente é obrigatório</span>
+            </div>   
+            <div class="form-group col-sm-4">
+                <label for="dependentes">Dependentes</label>
+                <input required type="number" class="form-control" id="dependentes" name="dependentes" placeholder="Nº de dependentes"
+                ng-model="proposta.cliente.dependentes">
+                <span class="error" ng-show="mainForm.dependentes.$error.required">O nº de dependentes do cliente é obrigatório</span>
+            </div> 
+            <div class="form-group col-sm-4"> 
+                <label for="renda">Renda</label>
+                <input required type="number" class="form-control" id="renda" name="renda" placeholder="Renda do cliente"
+                ng-model="proposta.renda">
+                <span class="error" ng-show="mainForm.renda.$error.required">A renda do cliente é obrigatória</span>
+            </div>          
+        </div>
+        <div class="row text-center">
+            <button type="button" class="btn btn-primary" ng-click="cadastrar()" ng-disabled="mainForm.$invalid">Enviar</button>
+        </div>
+    </div>
+</form>  

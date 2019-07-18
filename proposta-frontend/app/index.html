@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html lang="en" ng-app="proposta-app">
+    <head>
+      <meta charset="UTF-8">
+      <title>Análise de proposta de crédito</title>
+      <link rel="stylesheet"  href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+      <link rel="stylesheet"  href="css/main.css"/>
+
+      <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="lib/angular/angular.js"></script>
+      <script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+      <script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+      <script type="text/javascript" src="lib/angular-resource/angular-resource.min.js"></script>
+      <script type="text/javascript" src="lib/angular-ui-mask/dist/mask.min.js"></script>
+
+
+      <script type="text/javascript" src="app.js"></script>
+      <script type="text/javascript" src="app-routes.js"></script>
+      <script type="text/javascript" src="util/urlFactory.js"></script>
+
+      <script type="text/javascript" src="proposta/propostaController.js"></script>
+      <script type="text/javascript" src="proposta/consultaPropostaController.js"></script>
+      <script type="text/javascript" src="proposta/propostaService.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Proposta de Crédito</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="cadastrar"  >Cadastrar</a></li>
+          <li><a ui-sref="consultar"  >Consultar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ui-view></ui-view>
+
+</body>
+</html>
